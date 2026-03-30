@@ -140,7 +140,7 @@
     box-shadow:0 4px 20px rgba(59,130,246,.3);}
   .how-step h3{font-size:1rem;font-weight:700;color:var(--blue-dark);margin-bottom:.3rem;}
   .how-step p{font-size:.85rem;color:var(--text-muted);}
-  #login.active{min-height:100vh;display:flex;align-items:center;justify-content:center;
+  #login{min-height:100vh;display:flex;align-items:center;justify-content:center;
     padding:5rem 1rem 2rem;
     background:linear-gradient(135deg,var(--blue-light) 0%,#fff 50%,var(--bg) 100%);}
   .login-box{background:#fff;border-radius:24px;padding:2.5rem;width:100%;max-width:440px;
@@ -277,108 +277,19 @@
   .analysis-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
   footer{background:var(--blue-dark);color:rgba(255,255,255,.7);text-align:center;padding:1.5rem;font-size:.85rem;}
   footer span{color:#fff;font-weight:600;}
-  /* ── MOBILE RESPONSIVE ── */
   @media(max-width:900px){
     .panel-layout{flex-direction:column;}
     .sidebar{width:100%;height:auto;position:relative;top:0;flex-direction:row;flex-wrap:wrap;
-      gap:.3rem;padding:.8rem;border-right:none;border-bottom:1px solid var(--border);overflow-x:auto;}
+      gap:.3rem;padding:.8rem;border-right:none;border-bottom:1px solid var(--border);}
     .sidebar-title{display:none;}
-    .sidebar-link{font-size:.78rem;padding:.4rem .6rem;white-space:nowrap;}
     .dash-bottom{grid-template-columns:1fr;}
-    .analysis-grid{grid-template-columns:1fr!important;}
+    .analysis-grid{grid-template-columns:1fr;}
     .modal-vitals{grid-template-columns:1fr 1fr;}
-    .chart-resp{grid-column:auto!important;}
-    .patient-header-card{padding:1.2rem;gap:1rem;}
-    .analysis-header{flex-direction:column;align-items:flex-start;}
-    .panel-content{padding:1rem;}
-    .analysis-body{padding:1rem;}
-    .dash-body{padding:1rem;}
-    .dash-header{padding:1rem;}
   }
   @media(max-width:640px){
     .nav-links,.nav-btn{display:none;}
     .hamburger{display:flex;}
     .how-step:not(:last-child)::after{display:none;}
-    .hero{padding:2rem 1rem 1.5rem;}
-    .hero-content img{max-width:260px!important;}
-    .hero h1{font-size:clamp(1.6rem,6vw,2.2rem);}
-    .hero-content>p{font-size:.9rem;}
-    .hero-btns{flex-direction:column;align-items:center;}
-    .btn-primary,.btn-secondary{width:100%;max-width:280px;text-align:center;}
-    .hero-stats{gap:.8rem;}
-    .hero-stat-num{font-size:1.3rem;}
-    .vitals-grid{grid-template-columns:1fr 1fr;}
-    .features-grid{grid-template-columns:1fr;}
-    .how-steps{flex-direction:column;align-items:center;}
-    .how-step{min-width:unset;width:100%;max-width:320px;}
-    .param-tabs{gap:.3rem;}
-    .param-tab{font-size:.75rem;padding:.32rem .6rem;}
-    .range-pills{flex-wrap:wrap;}
-    .modal{padding:1rem;margin:.5rem;}
-    .modal-vitals{grid-template-columns:1fr 1fr!important;}
-    .chart-container{height:220px;}
-    .patients-table{font-size:.78rem;}
-    .patients-table th,.patients-table td{padding:.55rem .4rem;}
-    section{padding:3rem 1rem;}
-    .login-box{padding:1.5rem 1rem;}
-  }
-  @media(max-width:400px){
-    .vitals-grid{grid-template-columns:1fr;}
-    .hero-stat{min-width:60px;}
-  }
-
-  /* ─── COMPREHENSIVE MOBILE FIX ─── */
-  @media(max-width:768px){
-    nav{padding:0 1rem;}
-    .hero{padding:2rem 1rem 1.5rem;}
-    .hero-content{max-width:100%;}
-    .hero-badge{font-size:.75rem;padding:.35rem .8rem;}
-    .hero h1{font-size:clamp(1.7rem,6vw,2.4rem);}
-    .hero-content>p{font-size:.95rem;}
-    .hero-btns{flex-direction:column;align-items:center;}
-    .btn-primary,.btn-secondary{width:100%;max-width:300px;text-align:center;}
-    .hero-stats{gap:1rem;}
-    .hero-stat-num{font-size:1.4rem;}
-    section{padding:3rem 1rem;}
-    .features-grid{grid-template-columns:1fr;}
-    .how-steps{flex-direction:column;align-items:center;}
-    .how-step{min-width:unset;width:100%;max-width:340px;}
-    .how-step:not(:last-child)::after{display:none;}
-    .dash-header{padding:1rem;}
-    .dash-body{padding:1rem;}
-    .vitals-grid{grid-template-columns:1fr 1fr;}
-    .dash-bottom{grid-template-columns:1fr;}
-    .panel-layout{flex-direction:column;}
-    .sidebar{width:100%;height:auto;position:relative;top:0;
-      flex-direction:row;flex-wrap:wrap;gap:.3rem;padding:.6rem;
-      border-right:none;border-bottom:1px solid var(--border);
-      overflow-x:auto;}
-    .sidebar-title{display:none;}
-    .sidebar-link{font-size:.78rem;padding:.4rem .6rem;white-space:nowrap;}
-    .panel-content{padding:1rem;}
-    .patients-table{font-size:.78rem;}
-    .patients-table th,.patients-table td{padding:.6rem .5rem;}
-    .patient-layout{padding:1rem;}
-    .patient-header-card{padding:1.2rem;gap:1rem;}
-    .analysis-body{padding:1rem;}
-    .analysis-header{flex-direction:column;align-items:flex-start;gap:.8rem;}
-    .analysis-grid{grid-template-columns:1fr!important;}
-    .chart-card{padding:1rem;}
-    .chart-container{height:220px;}
-    .param-tabs{gap:.3rem;}
-    .param-tab{font-size:.75rem;padding:.35rem .6rem;}
-    .modal{padding:1.2rem;margin:.5rem;}
-    .modal-vitals{grid-template-columns:1fr 1fr!important;}
-    .range-pills{flex-wrap:wrap;}
-    .login-box{padding:1.5rem 1.2rem;}
-  }
-  @media(max-width:420px){
-    .vitals-grid{grid-template-columns:1fr;}
-    .hero-stats{gap:.6rem;}
-    .hero-stat{min-width:70px;}
-    .hero-stat-num{font-size:1.2rem;}
-    .patients-table th:nth-child(4),.patients-table td:nth-child(4),
-    .patients-table th:nth-child(5),.patients-table td:nth-child(5){display:none;}
   }
 </style>
 </head>
@@ -784,163 +695,19 @@ function setParam(p,el){
   document.querySelectorAll('.param-tab').forEach(t=>t.classList.remove('active'));
   el.classList.add('active');
   const map={hr:'chart-hr',spo2:'chart-spo2',temp:'chart-temp',sugar:'chart-sugar',resp:'chart-resp'};
-  const grid=document.getElementById('analysisGrid');
   if(p==='all'){
-    Object.entries(map).forEach(([k,id])=>{
-      const c=document.getElementById(id);
-      c.style.display='block';
-      c.style.gridColumn='';
-    });
+    Object.values(map).forEach(id=>{document.getElementById(id).style.display='';});
+    document.getElementById('analysisGrid').style.gridTemplateColumns='1fr 1fr';
     document.getElementById('chart-resp').style.gridColumn='1/-1';
-    grid.style.gridTemplateColumns='1fr 1fr';
   } else {
-    Object.entries(map).forEach(([k,id])=>{
-      document.getElementById(id).style.display=(k===p)?'block':'none';
-    });
-    grid.style.gridTemplateColumns='1fr';
-    if(map[p]) document.getElementById(map[p]).style.gridColumn='';
+    Object.entries(map).forEach(([k,id])=>{document.getElementById(id).style.display=k===p?'':'none';});
+    document.getElementById('analysisGrid').style.gridTemplateColumns='1fr';
+    if(p==='resp')document.getElementById('chart-resp').style.gridColumn='';
   }
-  setTimeout(()=>Object.values(analysisCharts).forEach(c=>{try{c.resize();}catch(e){}}),60);
 }
 initDashboard();
 setInterval(()=>{const el=document.getElementById('lastUpdated');if(el)el.textContent=new Date().toLocaleTimeString();},30000);
 </script>
 
-<!-- ══ CHATBOT ══ -->
-<style>
-@keyframes fabBounce{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-6px) scale(1.05);}}
-@keyframes fabRing{0%{box-shadow:0 0 0 0 rgba(59,130,246,.5);}70%{box-shadow:0 0 0 14px rgba(59,130,246,0);}100%{box-shadow:0 0 0 0 rgba(59,130,246,0);}}
-@keyframes chatSlide{from{opacity:0;transform:translateY(24px) scale(.95);}to{opacity:1;transform:none;}}
-@keyframes msgDot{0%,80%,100%{transform:scale(0);}40%{transform:scale(1);}}
-.chatbot-fab{
-  position:fixed;bottom:28px;right:28px;z-index:3000;
-  width:62px;height:62px;border-radius:50%;border:none;cursor:pointer;
-  background:linear-gradient(135deg,#1E40AF 0%,#3B82F6 50%,#0EA5E9 100%);
-  color:#fff;font-size:1.6rem;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 6px 28px rgba(30,64,175,.45),0 2px 8px rgba(0,0,0,.15);
-  transition:transform .25s, box-shadow .25s;
-  animation:fabBounce 3s ease-in-out infinite, fabRing 2s ease-out 1s infinite;
-}
-.chatbot-fab:hover{transform:scale(1.12);box-shadow:0 10px 36px rgba(30,64,175,.55);}
-.chatbot-fab.open{animation:none;background:linear-gradient(135deg,#EF4444,#F59E0B);box-shadow:0 6px 28px rgba(239,68,68,.45);}
-.chatbot-panel{
-  display:none;
-  position:fixed;bottom:104px;right:28px;z-index:2999;
-  width:380px;height:580px;max-height:calc(100vh - 130px);
-  border-radius:22px;overflow:hidden;
-  box-shadow:0 24px 64px rgba(30,64,175,.28),0 4px 16px rgba(0,0,0,.12);
-  border:1.5px solid rgba(59,130,246,.2);
-  animation:chatSlide .4s cubic-bezier(0.16,1,0.3,1) both;
-  flex-direction:column;
-}
-.chatbot-panel.open{display:flex;}
-.chatbot-header{
-  background:linear-gradient(135deg,#1E40AF 0%,#2563EB 60%,#0EA5E9 100%);
-  padding:.9rem 1.1rem;
-  display:flex;align-items:center;justify-content:space-between;
-  flex-shrink:0;
-}
-.chatbot-header-left{display:flex;align-items:center;gap:.7rem;}
-.chatbot-avatar{
-  width:40px;height:40px;border-radius:50%;
-  background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.35);
-  display:flex;align-items:center;justify-content:center;font-size:1.2rem;
-  position:relative;flex-shrink:0;
-}
-.chatbot-online{
-  position:absolute;bottom:1px;right:1px;
-  width:10px;height:10px;border-radius:50%;
-  background:#10B981;border:2px solid #1E40AF;
-}
-.chatbot-info{color:#fff;}
-.chatbot-name{font-weight:700;font-size:.95rem;line-height:1.2;}
-.chatbot-status{font-size:.72rem;opacity:.8;display:flex;align-items:center;gap:4px;}
-.chatbot-dot{width:6px;height:6px;border-radius:50%;background:#10B981;display:inline-block;}
-.chatbot-close{
-  width:30px;height:30px;border-radius:50%;border:none;cursor:pointer;
-  background:rgba(255,255,255,.15);color:#fff;font-size:1rem;
-  display:flex;align-items:center;justify-content:center;
-  transition:background .2s;flex-shrink:0;
-}
-.chatbot-close:hover{background:rgba(255,255,255,.3);}
-.chatbot-body{flex:1;background:#fff;position:relative;overflow:hidden;}
-.chatbot-body iframe{width:100%;height:100%;border:none;display:block;}
-.chatbot-footer{
-  background:#fff;padding:.55rem 1rem;
-  border-top:1px solid #DBEAFE;
-  display:flex;align-items:center;justify-content:center;gap:.4rem;
-  flex-shrink:0;
-}
-.chatbot-footer span{font-size:.7rem;color:#94a3b8;}
-.chatbot-footer strong{color:#3B82F6;font-size:.7rem;}
-/* Notification badge */
-.chatbot-badge{
-  position:absolute;top:-4px;right:-4px;
-  width:18px;height:18px;border-radius:50%;
-  background:#EF4444;color:#fff;font-size:.65rem;font-weight:700;
-  display:flex;align-items:center;justify-content:center;
-  border:2px solid #fff;
-  animation:fabRing 1.5s ease-out infinite;
-}
-@media(max-width:480px){
-  .chatbot-panel{width:calc(100vw - 20px);right:10px;bottom:90px;height:520px;}
-  .chatbot-fab{bottom:18px;right:18px;width:56px;height:56px;}
-}
-</style>
-
-<button class="chatbot-fab" id="chatFab" onclick="toggleChat()" title="Swasthya Seva AI Assistant">
-  <span id="chatFabIcon">🤖</span>
-  <span class="chatbot-badge" id="chatBadge">1</span>
-</button>
-
-<div class="chatbot-panel" id="chatPanel">
-  <div class="chatbot-header">
-    <div class="chatbot-header-left">
-      <div class="chatbot-avatar">
-        🤖
-        <div class="chatbot-online"></div>
-      </div>
-      <div class="chatbot-info">
-        <div class="chatbot-name">Swasthya AI Assistant</div>
-        <div class="chatbot-status"><span class="chatbot-dot"></span> Online · Health Support</div>
-      </div>
-    </div>
-    <button class="chatbot-close" onclick="toggleChat()">✕</button>
-  </div>
-  <div class="chatbot-body">
-    <iframe src="https://euphonious-ganache-e57128.netlify.app/" title="Swasthya Seva AI Chatbot" loading="lazy"></iframe>
-  </div>
-  <div class="chatbot-footer">
-    <span>Powered by</span>
-    <strong>Swasthya Seva AI</strong>
-    <span>· Smart Health Support</span>
-  </div>
-</div>
-
-<script>
-function toggleChat(){
-  const panel=document.getElementById('chatPanel');
-  const fab=document.getElementById('chatFab');
-  const icon=document.getElementById('chatFabIcon');
-  const badge=document.getElementById('chatBadge');
-  const isOpen=panel.classList.contains('open');
-  if(isOpen){
-    panel.classList.remove('open');
-    fab.classList.remove('open');
-    icon.textContent='🤖';
-  } else {
-    panel.classList.add('open');
-    fab.classList.add('open');
-    icon.textContent='✕';
-    badge.style.display='none';
-  }
-}
-// Hide badge after 4s on load to draw attention
-setTimeout(()=>{
-  const b=document.getElementById('chatBadge');
-  if(b) b.style.animation='none';
-},4000);
-</script>
 </body>
 </html>

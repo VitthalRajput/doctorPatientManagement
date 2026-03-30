@@ -806,6 +806,65 @@ initDashboard();
 setInterval(()=>{const el=document.getElementById('lastUpdated');if(el)el.textContent=new Date().toLocaleTimeString();},30000);
 </script>
 
+<!-- ── CHATBOT ── -->
+<div id="chatbot-fab" onclick="toggleChatbot()" title="Swasthya Seva AI Assistant"
+  style="position:fixed;bottom:24px;right:24px;z-index:3000;
+    width:56px;height:56px;border-radius:50%;
+    background:linear-gradient(135deg,#1E40AF,#0EA5E9);
+    color:#fff;font-size:1.5rem;
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;box-shadow:0 4px 20px rgba(30,64,175,.4);
+    transition:transform .25s,box-shadow .25s;
+    animation:fabPulse 2.5s ease-in-out infinite;">🤖</div>
+
+<div id="chatbot-panel"
+  style="display:none;position:fixed;bottom:92px;right:24px;z-index:2999;
+    width:370px;height:560px;max-height:calc(100vh - 120px);
+    border-radius:20px;overflow:hidden;
+    box-shadow:0 20px 60px rgba(30,64,175,.25);
+    border:1px solid #DBEAFE;
+    animation:chatSlideIn .35s cubic-bezier(0.16,1,0.3,1) both;">
+  <div style="background:linear-gradient(135deg,#1E40AF,#0EA5E9);
+    padding:.75rem 1rem;display:flex;align-items:center;justify-content:space-between;">
+    <div style="display:flex;align-items:center;gap:.5rem;color:#fff;">
+      <span style="font-size:1.2rem;">🤖</span>
+      <div>
+        <div style="font-weight:700;font-size:.9rem;">Swasthya Seva AI</div>
+        <div style="font-size:.72rem;opacity:.8;">Health Assistant</div>
+      </div>
+    </div>
+    <button onclick="toggleChatbot()"
+      style="background:rgba(255,255,255,.2);border:none;color:#fff;
+        width:28px;height:28px;border-radius:50%;cursor:pointer;
+        font-size:1rem;display:flex;align-items:center;justify-content:center;">✕</button>
+  </div>
+  <iframe src="https://euphonious-ganache-e57128.netlify.app/"
+    style="width:100%;height:calc(100% - 52px);border:none;background:#fff;"
+    title="Swasthya Seva Chatbot"></iframe>
+</div>
+
+<style>
+@keyframes fabPulse{0%,100%{box-shadow:0 4px 20px rgba(30,64,175,.4);}
+  50%{box-shadow:0 4px 28px rgba(14,165,233,.6),0 0 0 8px rgba(30,64,175,.1);}}
+@keyframes chatSlideIn{from{opacity:0;transform:translateY(20px) scale(.95);}to{opacity:1;transform:none;}}
+#chatbot-fab:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(30,64,175,.5)!important;}
+@media(max-width:480px){
+  #chatbot-panel{width:calc(100vw - 24px);right:12px;bottom:84px;height:500px;}
+  #chatbot-fab{bottom:16px;right:16px;}
+}
+</style>
+
+<script>
+function toggleChatbot(){
+  const panel=document.getElementById('chatbot-panel');
+  const fab=document.getElementById('chatbot-fab');
+  const isOpen=panel.style.display==='block';
+  panel.style.display=isOpen?'none':'block';
+  fab.textContent=isOpen?'🤖':'✕';
+  fab.style.background=isOpen?'linear-gradient(135deg,#1E40AF,#0EA5E9)':'linear-gradient(135deg,#EF4444,#F59E0B)';
+}
+</script>
+
 <!-- ══ CHATBOT ══ -->
 <style>
 @keyframes fabBounce{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-6px) scale(1.05);}}
